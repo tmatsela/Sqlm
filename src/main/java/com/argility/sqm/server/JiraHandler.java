@@ -36,7 +36,7 @@ public class JiraHandler {
 
         try{
             
-            System.out.println(String.format("Logging in to %s with username '%s'", urlJira, LoginName));
+        System.out.println(String.format("Logging in to %s with username '%s'", urlJira, LoginName));
         JiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
         URI uri = new URI(urlJira);
         JiraRestClient restClient = factory.createWithBasicHttpAuthentication(uri, LoginName, LoginPassword);
@@ -46,8 +46,7 @@ public class JiraHandler {
             URI jiraServerUri = new URI(urlJira);
             JiraRestClient restClient = factory.create(jiraServerUri, myAuthenticationHandler);
 */
-            
-            return restClient;
+       return restClient;
             
         } catch(Exception ex) {
                 throw ex;
